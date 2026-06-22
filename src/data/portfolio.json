@@ -1,0 +1,132 @@
+{
+  "profile": {
+    "name": "Abhijith Suresh Kumar",
+    "shortName": "Abhijith",
+    "tagline": "Crafting digital experiences through storytelling and strategy.",
+    "role": "Senior Digital Content Specialist",
+    "specialization": "Content Strategy · UI/UX Writing · Brand Communications",
+    "location": "India",
+    "yearsOfExperience": "5+",
+    "bio": "Equal parts copywriter, UX writer, and content strategist. I build scalable content frameworks and drive engagement across media, tech, and product environments.",
+    "avatarSvg": "/avatar.png",
+    "social": {
+      "github": "",
+      "linkedin": "https://linkedin.com/in/abhijithsuresh",
+      "instagram": "",
+      "email": "abhijithsuresh08@gmail.com",
+      "phone": "+91 7904923084",
+      "website": ""
+    }
+  },
+  "skills": {
+    "categories": [
+      {
+        "name": "Core Skills",
+        "items": ["SEO Writing", "UI/UX & Product Thinking", "Branding", "Content Strategy", "Digital & Content Marketing", "Email Automation", "Public Relations"]
+      },
+      {
+        "name": "Tools",
+        "items": ["CleverTap", "SEMrush", "Figma", "Adobe Suite", "Canva", "Claude", "Gemini", "Perplexity", "WordPress", "Notion"]
+      }
+    ]
+  },
+  "experience": [
+    {
+      "company": "Omnicom Global Solutions",
+      "role": "Senior Executive - Copywriting",
+      "period": "Nov 2025 - Present",
+      "location": "On-site / Hybrid",
+      "summary": "Optimized social media content for brand campaigns, ensuring messaging consistency and quality control.",
+      "highlights": [
+        "Coordinated communications with Fleishman Hillard and partner agencies for global clients.",
+        "Researched PR and digital marketing trends; produced case studies to inform strategies.",
+        "Mentored junior writers and promoted best practices in copywriting."
+      ]
+    },
+    {
+      "company": "HerKey",
+      "role": "Senior UI/UX Writer",
+      "period": "May 2024 - Aug 2025",
+      "location": "Remote / Hybrid",
+      "summary": "Led content design for user interfaces and marketing campaigns across HerKey's digital products.",
+      "highlights": [
+        "Developed content frameworks and standardized voice/tone guidelines.",
+        "Increased CleverTap campaign CTR from 4% to 12% and achieved 52% conversion via journey campaigns.",
+        "Delivered branded content for clients like Amdocs, HP, GoDaddy, and Publicis Sapient."
+      ]
+    },
+    {
+      "company": "Quess Corp (Client: Unacademy)",
+      "role": "Operations Associate",
+      "period": "Jun 2023 - Jan 2024",
+      "location": "On-site",
+      "summary": "Vendor point of contact for NEET, IIT-JEE, and SSC categories, managing operational execution.",
+      "highlights": [
+        "Executed YouTube and Telegram campaigns and optimized SEO with SEMrush.",
+        "Supervised educators and subject matter experts for content delivery."
+      ]
+    },
+    {
+      "company": "F1Studioz",
+      "role": "Content Writer",
+      "period": "Dec 2021 - Sep 2022",
+      "location": "Remote",
+      "summary": "Developed brand campaigns for internal communications and employee engagement.",
+      "highlights": [
+        "Created multi-channel marketing strategies to support client growth.",
+        "Produced SEO blogs and optimized content performance via analytics."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "her-movie-promo",
+      "title": "'Her' Movie Promotion",
+      "subtitle": "Influencer Campaign",
+      "description": "Managed digital promotions with MissMalini and Sanya Malhotra for the movie 'Her', ensuring brand alignment.",
+      "stack": ["Social Media", "PR", "Influencer Marketing"],
+      "role": "Campaign Manager",
+      "year": "2024",
+      "link": "",
+      "image": "",
+      "highlight": true
+    },
+    {
+      "id": "kancheepuram-campaign",
+      "title": "Kancheepuram Silk Storytelling",
+      "subtitle": "Anya Boutiques",
+      "description": "Heritage storytelling campaign spotlighting artisans and driving engagement through culturally resonant narratives.",
+      "stack": ["Content Strategy", "Cultural Storytelling", "Social Media"],
+      "role": "Content Writer",
+      "year": "2020",
+      "link": "",
+      "image": "",
+      "highlight": false
+    },
+    {
+      "id": "f1studioz-blogs",
+      "title": "F1Studioz Blog Series",
+      "subtitle": "Product Design & Thought Leadership",
+      "description": "Authored multiple in-depth articles on product redesign, remote work mental health, and World Design Capital Valencia. These posts drove significant engagement and established thought leadership for the agency.",
+      "stack": ["SEO Content", "B2B Marketing", "Product Strategy"],
+      "role": "Content Writer",
+      "year": "2022",
+      "link": "https://f1studioz.com/blog/all-about-product-redesign-in-and-out/",
+      "image": "",
+      "highlight": true
+    },
+    {
+      "id": "herkey-social",
+      "title": "HerKey Social Campaigns",
+      "subtitle": "LinkedIn & Instagram Growth",
+      "description": "Led end-to-end content creation for HerKey's social media platforms, including HerRising 2025 event promotions, AI sessions, and career growth initiatives.",
+      "stack": ["Social Media Strategy", "Copywriting", "Community Management"],
+      "role": "Senior Content Specialist",
+      "year": "2024-2025",
+      "link": "https://www.linkedin.com/posts/herkeyofficial_herrisindmumbai2025-herworklife-herkey-activity-7372510433985024000-hJFv",
+      "image": "",
+      "highlight": true
+    }
+  ],
+  "testimonials": []
+}
