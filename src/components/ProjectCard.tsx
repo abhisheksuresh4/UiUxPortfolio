@@ -1,21 +1,26 @@
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 import type { Project } from '../types/portfolio';
+import { ProjectCarousel } from './ProjectCarousel';
 
 export const ProjectCard = ({ project }: { project: Project }) => {
+  const [isCarouselOpen, setIsCarouselOpen] = useState(false);
+
   return (
-    <motion.div
-      whileHover={{ y: -8, scale: 1.025 }}
-      transition={{ type: 'spring', stiffness: 260, damping: 22 }}
-      className="relative flex-shrink-0 w-[340px] md:w-[400px] rounded-2xl overflow-hidden cursor-grab active:cursor-grabbing select-none flex flex-col"
-      style={{
-        // Warmer, more saturated glass — picks up the indigo section bg
-        background: 'linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(139,92,246,0.06) 100%)',
-        backdropFilter: 'blur(24px)',
-        WebkitBackdropFilter: 'blur(24px)',
-        border: '1px solid rgba(255,255,255,0.09)',
-        boxShadow: '0 2px 0 0 rgba(255,255,255,0.07) inset, 0 20px 60px rgba(0,0,0,0.5)',
-      }}
-    >
+    <>
+      <motion.div
+        onClick={() => setIsCarouselOpen(true)}
+        whileHover={{ y: -8, scale: 1.025 }}
+        transition={{ type: 'spring', stiffness: 260, damping: 22 }}
+        className="relative flex-shrink-0 w-[340px] md:w-[400px] rounded-2xl overflow-hidden cursor-pointer select-none flex flex-col group"
+        style={{
+          background: 'linear-gradient(135deg, rgba(30, 20, 70, 0.8) 0%, rgba(50, 30, 100, 0.6) 100%)',
+          backdropFilter: 'blur(24px)',
+          WebkitBackdropFilter: 'blur(24px)',
+          border: '1px solid rgba(167,139,250,0.2)',
+          boxShadow: '0 2px 0 0 rgba(255,255,255,0.07) inset, 0 20px 60px rgba(139,92,246,0.3)',
+        }}
+      >
       {/* Top shimmer line */}
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent z-10" />
 
@@ -73,7 +78,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
 
         {/* Title + badge */}
         <div className="flex flex-wrap items-start gap-2">
-          <h3 className="text-lg font-bold text-white leading-snug flex-1">{project.title}</h3>
+          <h3 className="text-lg font-bold text-white leading-snug flex-1" style={{ fontFamily: '"Poppins", sans-serif' }}>{project.title}</h3>
           {project.highlight && (
             <span
               className="shrink-0 mt-0.5 px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-widest"
@@ -134,5 +139,13 @@ export const ProjectCard = ({ project }: { project: Project }) => {
         )}
       </div>
     </motion.div>
+    
+    {/* Project Carousel Modal */}
+    <ProjectCarousel 
+      project={project} 
+      isOpen={isCarouselOpen} 
+      onClose={() => setIsCarouselOpen(false)}
+    />
+    </>
   );
 };

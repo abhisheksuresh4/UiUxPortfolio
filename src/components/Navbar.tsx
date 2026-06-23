@@ -28,7 +28,7 @@ export const Navbar = () => {
       transition={{ duration: 0.5 }}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        <a href="#hero" className="text-xl font-bold tracking-widest uppercase">
+        <a href="#hero" className="text-xl font-bold tracking-widest uppercase" style={{ fontFamily: '"Poppins", sans-serif' }}>
           Abhijith.
         </a>
         <div className="hidden md:flex gap-8 items-center">

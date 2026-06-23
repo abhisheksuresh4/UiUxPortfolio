@@ -35,6 +35,7 @@ export const ExperienceSection = () => {
         {/* Heading */}
         <motion.h2
           className="text-4xl md:text-5xl font-bold text-white mb-20 tracking-tight"
+          style={{ fontFamily: '"Poppins", sans-serif', fontWeight: 700 }}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -100,11 +101,11 @@ export const ExperienceSection = () => {
                     {/* Ripple ring */}
                     <motion.div
                       className="absolute w-6 h-6 rounded-full"
+                      style={{ background: 'rgba(167,139,250,0.35)' }}
                       initial={{ scale: 0.5, opacity: 0.6 }}
                       whileInView={{ scale: 2, opacity: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.9, delay: 0.3 }}
-                      style={{ background: 'rgba(167,139,250,0.35)' }}
                     />
                     {/* Dot core */}
                     <div
@@ -137,10 +138,10 @@ export const ExperienceSection = () => {
                 {/* Right: Content */}
                 <div className="flex flex-col gap-6">
                   <div>
-                    <h3 className="text-xl md:text-2xl font-semibold text-white mb-1">
+                    <h3 className="text-xl md:text-2xl font-semibold text-white mb-1" style={{ fontFamily: '"Poppins", sans-serif' }}>
                       {exp.company}
                     </h3>
-                    <p className="text-base text-white/45 font-light tracking-wide">
+                    <p className="text-base text-white/45 font-light tracking-wide italic" style={{ fontFamily: '"Poppins", sans-serif' }}>
                       {exp.role}
                     </p>
                   </div>
@@ -148,16 +149,6 @@ export const ExperienceSection = () => {
                   <p className="text-sm md:text-base text-white/60 leading-relaxed max-w-2xl">
                     {exp.summary}
                   </p>
-
-                  {exp.images && exp.images.length > 0 && (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      {exp.images.map((img, i) => (
-                        <div key={i} className="rounded-xl overflow-hidden border border-white/10 bg-white/5">
-                          <img src={img} alt={`${exp.company} screenshot ${i + 1}`} className="w-full h-auto object-cover" />
-                        </div>
-                      ))}
-                    </div>
-                  )}
 
                   <ul className="flex flex-col gap-3 mt-2">
                     {exp.highlights.slice(0, 4).map((highlight, idx) => (

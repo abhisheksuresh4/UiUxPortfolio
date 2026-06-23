@@ -1,4 +1,4 @@
-import { Mail, Phone, Globe, ExternalLink } from 'lucide-react';
+import { Mail, Phone, Globe } from 'lucide-react';
 import type { SocialLinks as SocialLinksType } from '../types/portfolio';
 
 const LinkedinIcon = ({ className }: { className?: string }) => (

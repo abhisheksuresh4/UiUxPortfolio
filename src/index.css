@@ -1,14 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import "tailwindcss";
 
 @theme {
   --color-dark-bg: #0C0C0C;
-  --font-kanit: "Kanit", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
 }
 
 body {
   background-color: var(--color-dark-bg);
   color: white;
-  font-family: var(--font-kanit);
+  font-family: var(--font-poppins);
 }
 
 .hero-heading {
@@ -42,8 +43,38 @@ html {
   animation: marquee 25s linear infinite;
 }
 
+@keyframes wave-flow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+.animate-wave-flow {
+  animation: wave-flow 3s ease-in-out infinite;
+}
+
+@keyframes throb-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(26, 60, 255, 0.4), 0 0 40px rgba(0, 87, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(26, 60, 255, 0.7), 0 0 60px rgba(0, 87, 255, 0.4);
+  }
+}
+
+.animate-throb-glow {
+  animation: throb-glow 2.5s ease-in-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .animate-marquee {
+  .animate-marquee,
+  .animate-wave-flow,
+  .animate-throb-glow {
     animation: none;
   }
 }

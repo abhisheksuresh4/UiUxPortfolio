@@ -65,6 +65,7 @@ export const ProjectsSection = () => {
       <div className="relative z-10 pt-24 pb-4 max-w-6xl mx-auto px-6">
         <motion.h2
           className="text-4xl md:text-5xl font-bold text-white tracking-tight"
+          style={{ fontFamily: '"Poppins", sans-serif' }}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

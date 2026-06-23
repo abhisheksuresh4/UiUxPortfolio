@@ -15,10 +15,10 @@ export const HeroSection = () => {
 
       {/* ── Full-bleed animated blue gradient background (matches screenshot) ── */}
       <div className="absolute inset-0 z-0 bg-[#03050F]">
-        {/* Primary deep-blue orb — top-left */}
-        <div className="absolute -top-1/4 -left-1/4 w-[80vw] h-[80vw] rounded-full bg-[#1a3cff]/60 blur-[120px]" />
+        {/* Primary deep-blue orb — top-left with throbbing effect */}
+        <div className="absolute -top-1/4 -left-1/4 w-[80vw] h-[80vw] rounded-full bg-[#1a3cff]/60 blur-[120px] animate-throb-glow" />
         {/* Accent bright-blue orb — bottom-right */}
-        <div className="absolute -bottom-1/4 -right-1/4 w-[70vw] h-[70vw] rounded-full bg-[#0057ff]/50 blur-[140px]" />
+        <div className="absolute -bottom-1/4 -right-1/4 w-[70vw] h-[70vw] rounded-full bg-[#0057ff]/50 blur-[140px] animate-wave-flow" />
         {/* Subtle dark centre vignette so text stays legible */}
         <div className="absolute inset-0 bg-radial-[ellipse_at_center] from-transparent via-[#03050F]/40 to-[#03050F]/80" />
       </div>
@@ -42,7 +42,12 @@ export const HeroSection = () => {
 
         {/* Name */}
         <motion.h1
-          className="text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tight text-white leading-none mt-2"
+          className="text-5xl sm:text-7xl lg:text-8xl font-black italic tracking-tight text-white leading-none mt-2"
+          style={{
+            fontFamily: '"Poppins", sans-serif',
+            fontWeight: 900,
+            letterSpacing: '-0.02em',
+          }}
           initial={{ y: 24, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
@@ -52,7 +57,8 @@ export const HeroSection = () => {
 
         {/* Role / subtitle — muted like "Personal Portfolio" in screenshot */}
         <motion.h2
-          className="text-lg md:text-xl text-white/55 font-medium tracking-widest uppercase"
+          className="text-lg md:text-xl text-white/60 font-semibold tracking-widest uppercase"
+          style={{ fontFamily: '"Poppins", sans-serif' }}
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.8 }}
