@@ -14,11 +14,11 @@ export const ProjectCard = ({ project }: { project: Project }) => {
         transition={{ type: 'spring', stiffness: 260, damping: 22 }}
         className="relative flex-shrink-0 w-[340px] md:w-[400px] rounded-2xl overflow-hidden cursor-pointer select-none flex flex-col group"
         style={{
-          background: 'linear-gradient(135deg, rgba(30, 20, 70, 0.8) 0%, rgba(50, 30, 100, 0.6) 100%)',
+          background: 'linear-gradient(135deg, rgba(60, 40, 120, 0.9) 0%, rgba(80, 50, 150, 0.85) 100%)',
           backdropFilter: 'blur(24px)',
           WebkitBackdropFilter: 'blur(24px)',
-          border: '1px solid rgba(167,139,250,0.2)',
-          boxShadow: '0 2px 0 0 rgba(255,255,255,0.07) inset, 0 20px 60px rgba(139,92,246,0.3)',
+          border: '1px solid rgba(167,139,250,0.35)',
+          boxShadow: '0 2px 0 0 rgba(255,255,255,0.1) inset, 0 20px 60px rgba(167,139,250,0.4), 0 0 1px rgba(167,139,250,0.2)',
         }}
       >
       {/* Top shimmer line */}

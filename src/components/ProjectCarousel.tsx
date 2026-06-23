@@ -47,9 +47,9 @@ export const ProjectCarousel = ({ project, isOpen, onClose }: ProjectCarouselPro
             <div
               className="relative w-full max-w-4xl rounded-3xl overflow-hidden shadow-2xl"
               style={{
-                background: 'linear-gradient(135deg, rgba(20, 15, 50, 0.95) 0%, rgba(30, 20, 70, 0.95) 100%)',
+                background: 'linear-gradient(135deg, rgba(60, 40, 120, 0.95) 0%, rgba(80, 50, 150, 0.95) 100%)',
                 backdropFilter: 'blur(20px)',
-                border: '1px solid rgba(167, 139, 250, 0.25)',
+                border: '1px solid rgba(167, 139, 250, 0.4)',
               }}
               onClick={e => e.stopPropagation()}
             >
