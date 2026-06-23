@@ -49,8 +49,8 @@ export const ProjectsSection = () => {
       <div
         className="absolute inset-x-0 top-0 h-px"
         style={{
-          background: 'linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.6) 40%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.6) 60%, transparent 100%)',
-          boxShadow: '0 0 24px 4px rgba(0, 0, 0, 0.3)',
+          background: 'linear-gradient(to right, transparent 0%, rgba(100,70,200,0.15) 40%, rgba(120,90,220,0.2) 50%, rgba(100,70,200,0.15) 60%, transparent 100%)',
+          boxShadow: '0 0 40px 8px rgba(100,80,200,0.15)',
         }}
       />
 
@@ -78,10 +78,10 @@ export const ProjectsSection = () => {
       {/* Carousel */}
       <div className="relative z-10 py-12">
         {/* Fade edges */}
-        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-28 z-10"
-          style={{ background: 'linear-gradient(to right, #08061A, transparent)' }} />
-        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-28 z-10"
-          style={{ background: 'linear-gradient(to left, #08061A, transparent)' }} />
+        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-32 z-10"
+          style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.4), transparent)' }} />
+        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-32 z-10"
+          style={{ background: 'linear-gradient(to left, rgba(0,0,0,0.4), transparent)' }} />
 
         <motion.div
           ref={trackRef}
@@ -114,7 +114,8 @@ export const ProjectsSection = () => {
       <div
         className="absolute inset-x-0 bottom-0 h-px"
         style={{
-          background: 'linear-gradient(to right, transparent 0%, rgba(139,92,246,0.4) 40%, rgba(167,139,250,0.6) 50%, rgba(139,92,246,0.4) 60%, transparent 100%)',
+          background: 'linear-gradient(to right, transparent 0%, rgba(139,92,246,0.2) 40%, rgba(167,139,250,0.3) 50%, rgba(139,92,246,0.2) 60%, transparent 100%)',
+          boxShadow: '0 0 40px 8px rgba(139,92,246,0.15)',
         }}
       />
     </section>
