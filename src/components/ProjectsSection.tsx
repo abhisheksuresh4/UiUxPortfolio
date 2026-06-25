@@ -37,50 +37,46 @@ export const ProjectsSection = () => {
   const looped = [...sorted, ...sorted, ...sorted];
 
   return (
-    // ── Section atmosphere: deep indigo-tinted bg, clearly different from black ──
     <section
       id="projects"
-      className="scroll-mt-20 overflow-hidden relative"
-      style={{
-        background: 'linear-gradient(180deg, #060606ff 0%, #000000ff 15%, #000000ff 50%, #010101ff 85%, #010101ff 100%)',
-      }}
+      className="scroll-mt-20 overflow-hidden relative bg-bg-deep"
     >
-      {/* Top separator glow — visually lifts this section off the one above */}
+      {/* Top separator glow — warm amber */}
       <div
         className="absolute inset-x-0 top-0 h-px"
         style={{
-          background: 'linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.6) 40%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.6) 60%, transparent 100%)',
-          boxShadow: '0 0 24px 4px rgba(0, 0, 0, 0.3)',
+          background: 'linear-gradient(to right, transparent 0%, rgba(232,162,58,0.1) 40%, rgba(232,162,58,0.18) 50%, rgba(232,162,58,0.1) 60%, transparent 100%)',
+          boxShadow: '0 0 30px 6px rgba(232,162,58,0.08)',
         }}
       />
 
-      {/* Ambient background orb — gives the section its own "mood" */}
+      {/* Ambient background orb */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 80% 50% at 50% 50%, rgba(0, 0, 0, 0.08) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse 80% 50% at 50% 50%, rgba(232,162,58,0.03) 0%, transparent 70%)',
         }}
       />
 
       <div className="relative z-10 pt-24 pb-4 max-w-6xl mx-auto px-6">
         <motion.h2
-          className="text-4xl md:text-5xl font-bold text-white tracking-tight"
+          className="text-4xl md:text-5xl font-bold text-text-primary tracking-tight"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
           Projects
         </motion.h2>
-        <p className="text-white/30 text-sm mt-3 tracking-wide">Drag to explore</p>
+        <p className="text-text-tertiary text-sm mt-3 tracking-wide">Drag to explore</p>
       </div>
 
       {/* Carousel */}
       <div className="relative z-10 py-12">
         {/* Fade edges */}
-        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-28 z-10"
-          style={{ background: 'linear-gradient(to right, #08061A, transparent)' }} />
-        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-28 z-10"
-          style={{ background: 'linear-gradient(to left, #08061A, transparent)' }} />
+        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-32 z-10"
+          style={{ background: 'linear-gradient(to right, #0a0a0b, transparent)' }} />
+        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-32 z-10"
+          style={{ background: 'linear-gradient(to left, #0a0a0b, transparent)' }} />
 
         <motion.div
           ref={trackRef}
@@ -113,7 +109,8 @@ export const ProjectsSection = () => {
       <div
         className="absolute inset-x-0 bottom-0 h-px"
         style={{
-          background: 'linear-gradient(to right, transparent 0%, rgba(139,92,246,0.4) 40%, rgba(167,139,250,0.6) 50%, rgba(139,92,246,0.4) 60%, transparent 100%)',
+          background: 'linear-gradient(to right, transparent 0%, rgba(232,162,58,0.12) 40%, rgba(232,162,58,0.2) 50%, rgba(232,162,58,0.12) 60%, transparent 100%)',
+          boxShadow: '0 0 30px 6px rgba(232,162,58,0.08)',
         }}
       />
     </section>

@@ -1,38 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --color-dark-bg: #0C0C0C;
-  --font-kanit: "Kanit", sans-serif;
+  --color-bg-deep: #0a0a0b;
+  --color-bg-surface: #141416;
+  --color-bg-elevated: #1c1c20;
+  --color-accent: #e8a23a;
+  --color-accent-subtle: rgba(232, 162, 58, 0.10);
+  --color-text-primary: #f0ede8;
+  --color-text-secondary: #8a8680;
+  --color-text-tertiary: #5a5652;
+  --font-heading: "Archivo", sans-serif;
+  --font-body: "Space Grotesk", sans-serif;
 }
 
 body {
-  background-color: var(--color-dark-bg);
-  color: white;
-  font-family: var(--font-kanit);
+  background-color: var(--color-bg-deep);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.hero-heading {
-  background: linear-gradient(180deg, #646973 0%, #BBCCD7 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* ── Accent gradients ── */
 .accent-gradient {
-  background: linear-gradient(90deg, purple 0%, magenta 50%, orange 100%);
+  background: linear-gradient(135deg, #e8a23a 0%, #d4781f 50%, #c0612a 100%);
 }
 
 .accent-text-gradient {
-  background: linear-gradient(90deg, purple 0%, magenta 50%, orange 100%);
+  background: linear-gradient(135deg, #e8a23a 0%, #f0c060 50%, #e8a23a 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-html { 
-  scroll-behavior: smooth; 
+.hero-heading {
+  background: linear-gradient(180deg, #f0ede8 0%, #8a8680 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
+/* ── Animations ── */
 @keyframes marquee {
   0% { transform: translateX(0%); }
   100% { transform: translateX(-100%); }
@@ -42,8 +59,67 @@ html {
   animation: marquee 25s linear infinite;
 }
 
+@keyframes wave-flow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.03);
+  }
+}
+
+.animate-wave-flow {
+  animation: wave-flow 4s ease-in-out infinite;
+}
+
+@keyframes throb-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(232, 162, 58, 0.25), 0 0 40px rgba(232, 162, 58, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(232, 162, 58, 0.45), 0 0 60px rgba(232, 162, 58, 0.2);
+  }
+}
+
+.animate-throb-glow {
+  animation: throb-glow 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* ── Reduced motion ── */
 @media (prefers-reduced-motion: reduce) {
-  .animate-marquee {
+  .animate-marquee,
+  .animate-wave-flow,
+  .animate-throb-glow,
+  .animate-float {
     animation: none;
   }
+}
+
+/* ── Custom scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2a2e;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a3e;
 }

@@ -1,4 +1,4 @@
-import { Mail, Phone, Globe, ExternalLink } from 'lucide-react';
+import { Mail, Phone, Globe } from 'lucide-react';
 import type { SocialLinks as SocialLinksType } from '../types/portfolio';
 
 const LinkedinIcon = ({ className }: { className?: string }) => (
@@ -9,28 +9,27 @@ const LinkedinIcon = ({ className }: { className?: string }) => (
 
 export const SocialLinks = ({ social }: { social: SocialLinksType }) => {
   return (
-    <div className="flex gap-4 items-center justify-center lg:justify-start">
+    <div className="flex gap-3 items-center justify-center lg:justify-start">
       {social.linkedin && (
-        <a href={social.linkedin} target="_blank" rel="noreferrer" className="p-3 bg-white/5 rounded-full hover:bg-white/10 hover:scale-110 transition-all duration-200">
+        <a href={social.linkedin} target="_blank" rel="noreferrer" className="p-3 bg-white/[0.04] border border-white/[0.06] rounded-xl hover:bg-accent/10 hover:border-accent/20 transition-all duration-200 cursor-pointer text-text-secondary hover:text-accent">
           <LinkedinIcon className="w-5 h-5" />
         </a>
       )}
       {social.website && (
-        <a href={social.website} target="_blank" rel="noreferrer" className="p-3 bg-white/5 rounded-full hover:bg-white/10 hover:scale-110 transition-all duration-200">
+        <a href={social.website} target="_blank" rel="noreferrer" className="p-3 bg-white/[0.04] border border-white/[0.06] rounded-xl hover:bg-accent/10 hover:border-accent/20 transition-all duration-200 cursor-pointer text-text-secondary hover:text-accent">
           <Globe className="w-5 h-5" />
         </a>
       )}
       {social.email && (
-        <a href={`mailto:${social.email}`} className="p-3 bg-white/5 rounded-full hover:bg-white/10 hover:scale-110 transition-all duration-200">
+        <a href={`mailto:${social.email}`} className="p-3 bg-white/[0.04] border border-white/[0.06] rounded-xl hover:bg-accent/10 hover:border-accent/20 transition-all duration-200 cursor-pointer text-text-secondary hover:text-accent">
           <Mail className="w-5 h-5" />
         </a>
       )}
       {social.phone && (
-        <a href={`tel:${social.phone}`} className="p-3 bg-white/5 rounded-full hover:bg-white/10 hover:scale-110 transition-all duration-200">
+        <a href={`tel:${social.phone}`} className="p-3 bg-white/[0.04] border border-white/[0.06] rounded-xl hover:bg-accent/10 hover:border-accent/20 transition-all duration-200 cursor-pointer text-text-secondary hover:text-accent">
           <Phone className="w-5 h-5" />
         </a>
       )}
     </div>
   );
 };
-

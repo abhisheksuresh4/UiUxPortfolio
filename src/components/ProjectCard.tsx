@@ -1,30 +1,32 @@
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 import type { Project } from '../types/portfolio';
+import { ProjectCarousel } from './ProjectCarousel';
 
 export const ProjectCard = ({ project }: { project: Project }) => {
+  const [isCarouselOpen, setIsCarouselOpen] = useState(false);
+
   return (
-    <motion.div
-      whileHover={{ y: -8, scale: 1.025 }}
-      transition={{ type: 'spring', stiffness: 260, damping: 22 }}
-      className="relative flex-shrink-0 w-[340px] md:w-[400px] rounded-2xl overflow-hidden cursor-grab active:cursor-grabbing select-none flex flex-col"
-      style={{
-        // Warmer, more saturated glass — picks up the indigo section bg
-        background: 'linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(139,92,246,0.06) 100%)',
-        backdropFilter: 'blur(24px)',
-        WebkitBackdropFilter: 'blur(24px)',
-        border: '1px solid rgba(255,255,255,0.09)',
-        boxShadow: '0 2px 0 0 rgba(255,255,255,0.07) inset, 0 20px 60px rgba(0,0,0,0.5)',
-      }}
-    >
+    <>
+      <motion.div
+        onClick={() => setIsCarouselOpen(true)}
+        whileHover={{ y: -6 }}
+        transition={{ type: 'spring', stiffness: 300, damping: 24 }}
+        data-cursor="project"
+        className="relative flex-shrink-0 w-[340px] md:w-[400px] rounded-2xl overflow-hidden cursor-pointer select-none flex flex-col group bg-bg-surface border border-white/[0.06] hover:border-accent/20 transition-colors duration-300"
+        style={{
+          boxShadow: '0 4px 24px rgba(0,0,0,0.3)',
+        }}
+      >
       {/* Top shimmer line */}
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent z-10" />
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/[0.08] to-transparent z-10" />
 
       {/* Featured glow border */}
       {project.highlight && (
         <div
           className="absolute inset-0 rounded-2xl pointer-events-none z-0"
           style={{
-            boxShadow: '0 0 0 1px rgba(167,139,250,0.25), 0 0 24px 0 rgba(139,92,246,0.12)',
+            boxShadow: '0 0 0 1px rgba(232,162,58,0.15), 0 0 24px 0 rgba(232,162,58,0.06)',
           }}
         />
       )}
@@ -36,32 +38,31 @@ export const ProjectCard = ({ project }: { project: Project }) => {
             src={project.image}
             alt={project.title}
             draggable={false}
-            className="w-full h-full object-cover"
-            style={{ opacity: 0.75 }}
+            className="w-full h-full object-cover opacity-80 group-hover:opacity-90 transition-opacity duration-300"
           />
           {/* Gradient into card body */}
           <div
             className="absolute inset-x-0 bottom-0 h-16"
-            style={{ background: 'linear-gradient(to top, rgba(12,9,32,0.9), transparent)' }}
+            style={{ background: 'linear-gradient(to top, #141416, transparent)' }}
           />
         </div>
       ) : (
         // Placeholder pattern when no image
         <div
           className="w-full aspect-video relative overflow-hidden"
-          style={{ background: 'rgba(139,92,246,0.06)' }}
+          style={{ background: 'rgba(232,162,58,0.03)' }}
         >
           {/* Subtle grid pattern */}
           <div
-            className="absolute inset-0 opacity-20"
+            className="absolute inset-0 opacity-15"
             style={{
-              backgroundImage: 'linear-gradient(rgba(167,139,250,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(167,139,250,0.3) 1px, transparent 1px)',
+              backgroundImage: 'linear-gradient(rgba(232,162,58,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(232,162,58,0.2) 1px, transparent 1px)',
               backgroundSize: '32px 32px',
             }}
           />
           {/* Centre monogram */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <span className="text-4xl font-black text-white/10 tracking-tighter select-none">
+            <span className="text-4xl font-black text-white/[0.06] tracking-tighter select-none">
               {project.title.slice(0, 2).toUpperCase()}
             </span>
           </div>
@@ -73,15 +74,10 @@ export const ProjectCard = ({ project }: { project: Project }) => {
 
         {/* Title + badge */}
         <div className="flex flex-wrap items-start gap-2">
-          <h3 className="text-lg font-bold text-white leading-snug flex-1">{project.title}</h3>
+          <h3 className="text-lg font-bold text-text-primary leading-snug flex-1">{project.title}</h3>
           {project.highlight && (
             <span
-              className="shrink-0 mt-0.5 px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-widest"
-              style={{
-                background: 'linear-gradient(135deg, rgba(192,132,252,0.18), rgba(249,115,22,0.18))',
-                border: '1px solid rgba(249,115,22,0.35)',
-                color: '#fb923c',
-              }}
+              className="shrink-0 mt-0.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-widest bg-accent/10 border border-accent/25 text-accent"
             >
               Featured
             </span>
@@ -89,12 +85,12 @@ export const ProjectCard = ({ project }: { project: Project }) => {
         </div>
 
         {project.subtitle && (
-          <p className="text-xs text-white/40 font-medium uppercase tracking-widest -mt-2">
+          <p className="text-xs text-text-tertiary font-medium uppercase tracking-widest -mt-2">
             {project.subtitle}
           </p>
         )}
 
-        <p className="text-sm text-white/55 leading-relaxed line-clamp-3 flex-1">
+        <p className="text-sm text-text-secondary leading-relaxed line-clamp-3 flex-1">
           {project.description}
         </p>
 
@@ -103,11 +99,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
           {project.stack.map(tech => (
             <span
               key={tech}
-              className="px-2.5 py-1 rounded-full text-[10px] font-medium text-white/45"
-              style={{
-                background: 'rgba(167,139,250,0.08)',
-                border: '1px solid rgba(167,139,250,0.15)',
-              }}
+              className="px-2.5 py-1 rounded-full text-[10px] font-medium text-text-tertiary bg-white/[0.03] border border-white/[0.06]"
             >
               {tech}
             </span>
@@ -121,18 +113,20 @@ export const ProjectCard = ({ project }: { project: Project }) => {
             target="_blank"
             rel="noreferrer"
             onClick={e => e.stopPropagation()}
-            className="mt-2 self-start px-5 py-2 rounded-full text-[11px] font-bold uppercase tracking-widest transition-all"
-            style={{
-              background: 'rgba(255,255,255,0.92)',
-              color: '#0c0920',
-            }}
-            onMouseEnter={e => (e.currentTarget.style.background = '#fff')}
-            onMouseLeave={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.92)')}
+            className="mt-2 self-start px-5 py-2 rounded-full text-[11px] font-bold uppercase tracking-widest bg-accent text-bg-deep hover:bg-accent/90 transition-colors duration-200 cursor-pointer"
           >
             View Work →
           </a>
         )}
       </div>
     </motion.div>
+    
+    {/* Project Carousel Modal */}
+    <ProjectCarousel 
+      project={project} 
+      isOpen={isCarouselOpen} 
+      onClose={() => setIsCarouselOpen(false)}
+    />
+    </>
   );
 };

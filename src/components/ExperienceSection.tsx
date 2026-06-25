@@ -28,13 +28,13 @@ export const ExperienceSection = () => {
     <section
       id="experience"
       ref={sectionRef}
-      className="py-24 scroll-mt-20 bg-black"
+      className="py-24 scroll-mt-20 bg-bg-deep"
     >
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Heading */}
         <motion.h2
-          className="text-4xl md:text-5xl font-bold text-white mb-20 tracking-tight"
+          className="text-4xl md:text-5xl font-bold text-text-primary mb-20 tracking-tight"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -50,26 +50,26 @@ export const ExperienceSection = () => {
             style={{ left: 'calc(19.56rem + 7px)' }}
           >
             {/* Dim static track */}
-            <div className="absolute inset-0 w-px bg-white/[0.08]" />
+            <div className="absolute inset-0 w-px bg-white/[0.06]" />
 
-            {/* Glowing fill — grows from top on scroll */}
+            {/* Glowing fill — amber gradient */}
             <motion.div
               className="absolute top-0 left-0 w-px origin-top"
               style={{
                 scaleY: lineScaleY,
                 height: '100%',
-                background: 'linear-gradient(to bottom, transparent, #a78bfa 20%, #818cf8 60%, #c084fc)',
-                boxShadow: '0 0 8px 2px rgba(167,139,250,0.5)',
+                background: 'linear-gradient(to bottom, transparent, #e8a23a 20%, #d4781f 60%, #e8a23a)',
+                boxShadow: '0 0 8px 2px rgba(232,162,58,0.35)',
               }}
             />
 
-            {/* Leading glow orb riding the tip */}
+            {/* Leading glow orb */}
             <motion.div
               className="absolute left-1/2 -translate-x-1/2 w-3 h-10 rounded-full pointer-events-none"
               style={{
                 top: glowTop,
                 opacity: glowOpacity,
-                background: 'radial-gradient(ellipse at center, rgba(167,139,250,0.9) 0%, transparent 70%)',
+                background: 'radial-gradient(ellipse at center, rgba(232,162,58,0.9) 0%, transparent 70%)',
                 filter: 'blur(4px)',
               }}
             />
@@ -100,25 +100,25 @@ export const ExperienceSection = () => {
                     {/* Ripple ring */}
                     <motion.div
                       className="absolute w-6 h-6 rounded-full"
+                      style={{ background: 'rgba(232,162,58,0.25)' }}
                       initial={{ scale: 0.5, opacity: 0.6 }}
                       whileInView={{ scale: 2, opacity: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.9, delay: 0.3 }}
-                      style={{ background: 'rgba(167,139,250,0.35)' }}
                     />
                     {/* Dot core */}
                     <div
                       className="w-3 h-3 rounded-full z-10"
                       style={{
-                        background: 'radial-gradient(circle, #f3e8ff 0%, #a78bfa 55%, #7c3aed 100%)',
-                        boxShadow: '0 0 0 2px rgba(167,139,250,0.25), 0 0 14px 5px rgba(167,139,250,0.45)',
+                        background: 'radial-gradient(circle, #fef3c7 0%, #e8a23a 55%, #c0612a 100%)',
+                        boxShadow: '0 0 0 2px rgba(232,162,58,0.2), 0 0 14px 5px rgba(232,162,58,0.3)',
                       }}
                     />
                   </motion.div>
 
                   {/* Year */}
                   <div className="md:pr-12">
-                    <p className="text-4xl md:text-5xl font-bold text-white/20 leading-tight tracking-tight">
+                    <p className="text-4xl md:text-5xl font-bold text-white/15 leading-tight tracking-tight">
                       {exp.period.includes('(') ? (
                         <>
                           {exp.period.split('(')[0].trim()}
@@ -137,32 +137,22 @@ export const ExperienceSection = () => {
                 {/* Right: Content */}
                 <div className="flex flex-col gap-6">
                   <div>
-                    <h3 className="text-xl md:text-2xl font-semibold text-white mb-1">
+                    <h3 className="text-xl md:text-2xl font-semibold text-text-primary mb-1">
                       {exp.company}
                     </h3>
-                    <p className="text-base text-white/45 font-light tracking-wide">
+                    <p className="text-base text-accent/70 font-light tracking-wide italic">
                       {exp.role}
                     </p>
                   </div>
 
-                  <p className="text-sm md:text-base text-white/60 leading-relaxed max-w-2xl">
+                  <p className="text-sm md:text-base text-text-secondary leading-relaxed max-w-2xl">
                     {exp.summary}
                   </p>
 
-                  {exp.images && exp.images.length > 0 && (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      {exp.images.map((img, i) => (
-                        <div key={i} className="rounded-xl overflow-hidden border border-white/10 bg-white/5">
-                          <img src={img} alt={`${exp.company} screenshot ${i + 1}`} className="w-full h-auto object-cover" />
-                        </div>
-                      ))}
-                    </div>
-                  )}
-
                   <ul className="flex flex-col gap-3 mt-2">
                     {exp.highlights.slice(0, 4).map((highlight, idx) => (
-                      <li key={idx} className="flex gap-3 text-white/50 text-sm leading-relaxed">
-                        <span className="text-white/25 mt-0.5 shrink-0">→</span>
+                      <li key={idx} className="flex gap-3 text-text-tertiary text-sm leading-relaxed">
+                        <span className="text-accent/40 mt-0.5 shrink-0">→</span>
                         <span>{highlight}</span>
                       </li>
                     ))}

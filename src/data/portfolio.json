@@ -11,7 +11,7 @@
     "avatarSvg": "/avatar.png",
     "social": {
       "github": "",
-      "linkedin": "https://linkedin.com/in/abhijithsuresh",
+      "linkedin": "https://www.linkedin.com/in/abhijith-suresh-kumar/",
       "instagram": "",
       "email": "abhijithsuresh08@gmail.com",
       "phone": "+91 7904923084",
@@ -22,18 +22,37 @@
     "categories": [
       {
         "name": "Core Skills",
-        "items": ["SEO Writing", "UI/UX & Product Thinking", "Branding", "Content Strategy", "Digital & Content Marketing", "Email Automation", "Public Relations"]
+        "items": [
+          "SEO Writing",
+          "UI/UX & Product Thinking",
+          "Branding",
+          "Content Strategy",
+          "Digital & Content Marketing",
+          "Email Automation",
+          "Public Relations"
+        ]
       },
       {
         "name": "Tools",
-        "items": ["CleverTap", "SEMrush", "Figma", "Adobe Suite", "Canva", "Claude", "Gemini", "Perplexity", "WordPress", "Notion"]
+        "items": [
+          "CleverTap",
+          "SEMrush",
+          "Figma",
+          "Adobe Suite",
+          "Canva",
+          "Claude",
+          "Gemini",
+          "Perplexity",
+          "WordPress",
+          "Notion"
+        ]
       }
     ]
   },
   "experience": [
     {
       "company": "Omnicom Global Solutions",
-      "role": "Senior Executive - Copywriting",
+      "role": "Senior Analyst - Copywriting",
       "period": "Nov 2025 - Present",
       "location": "On-site / Hybrid",
       "summary": "Optimized social media content for brand campaigns, ensuring messaging consistency and quality control.",
@@ -84,7 +103,11 @@
       "title": "'Her' Movie Promotion",
       "subtitle": "Influencer Campaign",
       "description": "Managed digital promotions with MissMalini and Sanya Malhotra for the movie 'Her', ensuring brand alignment.",
-      "stack": ["Social Media", "PR", "Influencer Marketing"],
+      "stack": [
+        "Social Media",
+        "PR",
+        "Influencer Marketing"
+      ],
       "role": "Campaign Manager",
       "year": "2024",
       "link": "",
@@ -96,7 +119,11 @@
       "title": "Kancheepuram Silk Storytelling",
       "subtitle": "Anya Boutiques",
       "description": "Heritage storytelling campaign spotlighting artisans and driving engagement through culturally resonant narratives.",
-      "stack": ["Content Strategy", "Cultural Storytelling", "Social Media"],
+      "stack": [
+        "Content Strategy",
+        "Cultural Storytelling",
+        "Social Media"
+      ],
       "role": "Content Writer",
       "year": "2020",
       "link": "",
@@ -108,7 +135,11 @@
       "title": "F1Studioz Blog Series",
       "subtitle": "Product Design & Thought Leadership",
       "description": "Authored multiple in-depth articles on product redesign, remote work mental health, and World Design Capital Valencia. These posts drove significant engagement and established thought leadership for the agency.",
-      "stack": ["SEO Content", "B2B Marketing", "Product Strategy"],
+      "stack": [
+        "SEO Content",
+        "B2B Marketing",
+        "Product Strategy"
+      ],
       "role": "Content Writer",
       "year": "2022",
       "link": "https://f1studioz.com/blog/all-about-product-redesign-in-and-out/",
@@ -120,7 +151,11 @@
       "title": "HerKey Social Campaigns",
       "subtitle": "LinkedIn & Instagram Growth",
       "description": "Led end-to-end content creation for HerKey's social media platforms, including HerRising 2025 event promotions, AI sessions, and career growth initiatives.",
-      "stack": ["Social Media Strategy", "Copywriting", "Community Management"],
+      "stack": [
+        "Social Media Strategy",
+        "Copywriting",
+        "Community Management"
+      ],
       "role": "Senior Content Specialist",
       "year": "2024-2025",
       "link": "https://www.linkedin.com/posts/herkeyofficial_herrisindmumbai2025-herworklife-herkey-activity-7372510433985024000-hJFv",

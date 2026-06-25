@@ -4,10 +4,12 @@ import { AboutSection } from './components/AboutSection';
 import { ExperienceSection } from './components/ExperienceSection';
 import { ProjectsSection } from './components/ProjectsSection';
 import { Footer } from './components/Footer';
+import { CustomCursor } from './components/CustomCursor';
 
 function App() {
   return (
-    <div className="bg-[#0C0C0C] min-h-screen text-white font-sans selection:bg-[#c084fc] selection:text-white">
+    <div className="bg-bg-deep min-h-screen text-text-primary selection:bg-accent/30 selection:text-white">
+      <CustomCursor />
       <Navbar />
       <main>
         <HeroSection />
